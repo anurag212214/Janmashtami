@@ -1,3 +1,6 @@
+const music = new Audio("Music 1.mp3");
+music.loop = true;
+music.volume = 0.45;
 /* =========================
    JANMASHTAMI SURPRISE
 ========================= */
@@ -14,8 +17,9 @@ const petalsContainer = document.querySelector(".petals");
 ========================= */
 
 function startSurprise() {
-
-  // Hide intro
+music.play().catch(() => {});
+ 
+   // Hide intro
   intro.style.opacity = "0";
   intro.style.transform = "scale(1.08)";
 
