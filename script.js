@@ -64,7 +64,20 @@ function closeLetter() {
   envelope.classList.remove("open");
 
   setTimeout(() => {
+
     letterSection.style.display = "none";
+
+    setTimeout(() => {
+      const radhaSection = document.getElementById("radhaSection");
+
+      if (radhaSection) {
+        radhaSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }, 200);
+
   }, 700);
 }
 
