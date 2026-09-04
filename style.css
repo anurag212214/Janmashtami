@@ -534,3 +534,95 @@ body::after {
     opacity: 1;
   }
 }
+/* =========================
+   SECRET SURPRISE
+========================= */
+
+.secret-btn {
+  display: block;
+  margin: 18px auto 0;
+  padding: 11px 20px;
+  border: 1px solid rgba(255, 215, 120, .5);
+  border-radius: 30px;
+  background: rgba(255, 215, 120, .08);
+  color: #ffe8a3;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  cursor: pointer;
+  transition: .4s ease;
+  box-shadow: 0 0 15px rgba(255, 200, 80, .1);
+}
+
+.secret-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 215, 120, .15);
+  box-shadow: 0 0 25px rgba(255, 200, 80, .3);
+}
+
+.secret-message {
+  display: none;
+  margin-top: 22px;
+  padding: 22px 18px;
+  border-radius: 15px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 246, 218, .98),
+    rgba(255, 232, 185, .98)
+  );
+  color: #4a3020;
+  text-align: center;
+  box-shadow:
+    0 0 30px rgba(255, 205, 100, .25),
+    0 15px 40px rgba(0,0,0,.35);
+  animation: secretReveal .9s ease forwards;
+}
+
+.secret-message.show {
+  display: block;
+}
+
+.secret-heart {
+  font-size: 38px;
+  margin-bottom: 8px;
+  animation: heartBeat 1.4s ease-in-out infinite;
+}
+
+.secret-message h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+.secret-message p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.secret-final {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #70452b;
+}
+
+@keyframes secretReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
