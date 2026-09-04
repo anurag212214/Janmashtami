@@ -884,3 +884,223 @@ body::after {
     transform: translateY(0) scale(1) rotate(0deg);
   }
 }
+/* =========================
+   RADHA PHOTO FLOATING EFFECT
+========================= */
+
+.radha-photo {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.photo-one {
+  animation:
+    radhaPhotoReveal 1.2s ease forwards,
+    radhaFloatOne 4s ease-in-out 1.5s infinite;
+}
+
+.photo-two {
+  animation:
+    radhaPhotoReveal 1.2s ease .6s forwards,
+    radhaFloatTwo 4.5s ease-in-out 2s infinite;
+}
+
+@keyframes radhaFloatOne {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes radhaFloatTwo {
+  0%, 100% {
+    transform: translateY(0) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}/* =========================
+   RADHA HEADING REVEAL
+========================= */
+
+.radha-content h2 {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: radhaHeadingReveal 1s ease forwards;
+  animation-delay: 1s;
+  text-shadow:
+    0 0 8px rgba(255, 215, 120, .5),
+    0 0 20px rgba(255, 215, 120, .25);
+}
+
+@keyframes radhaHeadingReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}/* =========================
+   RADHA TEXT REVEAL
+========================= */
+
+.radha-text p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: radhaTextReveal 1s ease forwards;
+}
+
+.radha-text p:nth-child(1) {
+  animation-delay: 1.5s;
+}
+
+.radha-text p:nth-child(2) {
+  animation-delay: 1.9s;
+}
+
+.radha-text p:nth-child(3) {
+  animation-delay: 2.3s;
+}
+
+.radha-text p:nth-child(4) {
+  animation-delay: 2.7s;
+}
+
+.radha-text p:nth-child(5) {
+  animation-delay: 3.1s;
+}
+
+.radha-text p:nth-child(6) {
+  animation-delay: 3.5s;
+}
+
+.radha-text p:nth-child(7) {
+  animation-delay: 3.9s;
+}
+
+.radha-text p:nth-child(8) {
+  animation-delay: 4.3s;
+}
+
+.radha-text p:nth-child(9) {
+  animation-delay: 4.7s;
+}
+
+@keyframes radhaTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/* =========================
+   FINAL RADHA MESSAGE
+========================= */
+
+.final-radha {
+  margin-top: 35px;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transform: scale(.9);
+  animation: finalRadhaReveal 1.4s ease forwards;
+  animation-delay: 5.3s;
+  text-shadow:
+    0 0 10px rgba(255, 120, 180, .6),
+    0 0 25px rgba(255, 180, 220, .3);
+}
+
+@keyframes finalRadhaReveal {
+  0% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}/* =========================
+   JANMASHTAMI FINAL REVEAL
+========================= */
+
+.janmashtami-final {
+  opacity: 0;
+  transform: translateY(20px) scale(.95);
+  animation: janmashtamiFinal 1.5s ease forwards;
+  animation-delay: 6s;
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(255, 215, 120, .7),
+    0 0 25px rgba(255, 180, 100, .35);
+}
+
+@keyframes janmashtamiFinal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}/* =========================
+   RADHE RADHE FINAL GLOW
+========================= */
+
+.radhe-final {
+  opacity: 0;
+  animation:
+    radheFinalReveal 1.5s ease forwards,
+    radheGlow 3s ease-in-out 7.5s infinite;
+  animation-delay: 6.8s, 7.5s;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@keyframes radheFinalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes radheGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 180, 200, .3);
+    transform: scale(1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px rgba(255, 180, 200, .8),
+      0 0 25px rgba(255, 200, 220, .4);
+    transform: scale(1.04);
+  }
+}
