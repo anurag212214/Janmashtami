@@ -1104,3 +1104,26 @@ body::after {
     transform: scale(1.04);
   }
 }
+/* =========================
+   MOBILE RADHA PHOTO FIX
+========================= */
+
+@media (max-width: 600px) {
+
+  .radha-photos {
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .radha-photo {
+    width: 44%;
+    max-width: 150px;
+  }
+
+  .radha-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
