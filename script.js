@@ -196,3 +196,19 @@ window.addEventListener("load", () => {
   }, 100);
 
 });
+function showSecret() {
+
+  const secret = document.getElementById("secretMessage");
+  const button = document.querySelector(".secret-btn");
+
+  secret.classList.add("show");
+
+  button.style.display = "none";
+
+  // Extra magical flowers
+  for (let i = 0; i < 12; i++) {
+    setTimeout(() => {
+      createPetal();
+    }, i * 120);
+  }
+}
