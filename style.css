@@ -474,3 +474,63 @@ body::before {
     transform: translateY(-100px) scale(.98);
   }
   }
+/* =========================
+   PREMIUM JANMASHTAMI GLOW
+========================= */
+
+body::after {
+  content: "🪷   🪔   🦚   🪔   🪷";
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 18px;
+  opacity: .55;
+  pointer-events: none;
+  z-index: 10;
+  animation: bottomGlow 3s ease-in-out infinite;
+}
+
+@keyframes bottomGlow {
+  0%, 100% {
+    opacity: .35;
+    transform: translateX(-50%) scale(.98);
+  }
+
+  50% {
+    opacity: .8;
+    transform: translateX(-50%) scale(1.03);
+  }
+}
+
+/* Golden divine glow */
+
+.main-content::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 205, 100, .18),
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: divineGlow 4s ease-in-out infinite;
+}
+
+@keyframes divineGlow {
+  0%, 100% {
+    transform: scale(.9);
+    opacity: .5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
