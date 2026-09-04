@@ -816,3 +816,37 @@ body::after {
     font-size: 26px;
   }
 }
+/* =========================
+   RADHA SECTION ENTRY HINT
+========================= */
+
+.radha-section {
+  scroll-margin-top: 20px;
+}
+
+.radha-intro {
+  animation: hintPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% {
+    opacity: .55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Golden separator */
+
+.radha-section::after {
+  content: "✦  🦚  ✦";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  letter-spacing: 8px;
+  opacity: .45;
+}
