@@ -1127,3 +1127,63 @@ body::after {
   }
 
 }
+/* =========================
+   RADHA SECTION PREMIUM GLOW
+========================= */
+
+.radha-section {
+  overflow: hidden;
+}
+
+.radha-content {
+  position: relative;
+}
+
+.radha-content::before {
+  content: "🦚";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  opacity: .18;
+  filter: blur(.2px);
+  animation: peacockGlow 3s ease-in-out infinite;
+}
+
+@keyframes peacockGlow {
+  0%, 100% {
+    opacity: .12;
+    transform: translateX(-50%) scale(.9);
+  }
+
+  50% {
+    opacity: .35;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+/* =========================
+   RADHA FINAL DIVIDER
+========================= */
+
+.radhe-final::after {
+  content: "✦  🪷  ✦";
+  display: block;
+  margin-top: 14px;
+  font-size: 16px;
+  letter-spacing: 6px;
+  opacity: .55;
+  animation: dividerGlow 3s ease-in-out infinite;
+}
+
+@keyframes dividerGlow {
+  0%, 100% {
+    opacity: .35;
+    transform: scale(.95);
+  }
+
+  50% {
+    opacity: .75;
+    transform: scale(1.05);
+  }
+}
